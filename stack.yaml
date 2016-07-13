@@ -1,0 +1,9 @@
+flags:
+  iso8601-time:
+    new-time: false
+extra-package-dbs: []
+packages:
+- '.'
+extra-deps:
+- iso8601-time-0.1.4
+resolver: lts-2.20
