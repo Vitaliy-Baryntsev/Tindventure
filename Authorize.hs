@@ -21,10 +21,7 @@ authorize :: IO String
 authorize = readFile authTokenFilePath
 
 writeAuthorize :: IO String
-writeAuthorize = do
-  tok <- fullAuthorize
-  writeFile authTokenFilePath tok
-  return tok
+writeAuthorize = fullAuthorize >== writeFile authTokenFilePath
 
 fullAuthorize :: IO String
 fullAuthorize = do
